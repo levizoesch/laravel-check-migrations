@@ -1,0 +1,28 @@
+{
+    "name": "levizoesch/laravel-check-migrations",
+    "type": "project",
+    "license": "MIT",
+    "description": "A Laravel command scans your application for pending migrations, providing a clear overview of what needs to be migrated.\nYou can then choose to run individual migrations or skip them as needed, short-cutting and optimizing your development workflow.",
+    "keywords": [
+        "Levi Zoesch",
+        "laravel",
+        "laravel commands",
+        "laravel helpers",
+        "Laravel Check Migrations"
+    ],
+    "require": {
+        "php": "^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4" : {
+            "levizoesch\\checkmigrations\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "levizoesch\\checkmigrations\\CheckMigrationsServiceProvider"
+            ]
+        }
+    }
+}
