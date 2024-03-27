@@ -46,3 +46,9 @@ php artisan check-migrations --ignore=20230101000000_create_example_table
 Ensure that your Laravel project is properly configured and migrations are set up correctly for this command to work effectively.
 
 Always review pending migrations before running them in production environments to prevent unintended consequences.
+
+## Known Issues
+
+### Double Confirmation Prompts in Production
+
+When running the `check-migrations` command in a production environment, users may encounter double confirmation prompts. This occurs due to Laravel's native `migrate` command prompting for confirmation before migrating when in production mode. Since the `check-migrations` command internally calls the `migrate` command for each pending migration, users may be prompted twice for confirmation for each migration.
